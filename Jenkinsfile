@@ -16,7 +16,7 @@ pipeline {
 
         stage("Run Tests") {
             when {
-                expression { return params.RUN_TESTS }
+                expression { return params.RUN_TESTS == true }
             }
             steps {
                 echo "Executing unit tests for ${params.ENVIRONMENT}..."
